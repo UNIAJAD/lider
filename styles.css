@@ -1,0 +1,284 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #1E1E1E;
+    background-color: #EEECE1;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+header {
+    background-color: #1E1E1E;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+
+.logo img {
+    height: 30px;
+    margin: 0 auto;
+}
+
+/* Introduction Section */
+.intro {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #EEECE1;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(238, 236, 225, 0.1), rgba(238, 236, 225, 0.05));
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.intro .container {
+    position: relative;
+    z-index: 1;
+}
+
+.intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.3;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 0;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.couple-photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.couple {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.couple img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.couple:hover img {
+    transform: scale(1.05);
+}
+
+/* Gratitude Section */
+.gratitude {
+    padding: 100px 0;
+    background-color: #1E1E1E;
+    color: #fff;
+    text-align: center;
+}
+
+.message {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.commitment {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.4;
+}
+
+.commitment span {
+    font-weight: 700;
+    color: #EEECE1;
+}
+
+.history {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Group Photo Section */
+.group-photo {
+    padding: 0;
+    background-color: #EEECE1;
+    position: relative;
+    min-height: 50vh;
+    overflow: hidden;
+}
+
+.group-photo::before {
+    background-color: #EEECE1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(238, 236, 225, 0.1), rgba(238, 236, 225, 0.05));
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.group-photo .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+.photo-container {
+    width: 100%;
+    min-height: 30vh;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.group-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Animation Classes */
+.reveal-title, .reveal-subtitle, .reveal-left, .reveal-right, .reveal-bottom {
+    visibility: hidden;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.6rem;
+    }
+    
+    .commitment {
+        font-size: 1.5rem;
+    }
+    
+    .history {
+        font-size: 1.2rem;
+    }
+    
+    .couple-photos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .couple {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding: 70px 0;
+    }
+    
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.3rem;
+    }
+    
+    .commitment {
+        font-size: 1.3rem;
+    }
+    
+    .history {
+        font-size: 1.1rem;
+    }
+    
+    .photo-container {
+        min-height: 25vh;
+    }
+    
+    .quote {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-top: -20px;
+    }
+}
